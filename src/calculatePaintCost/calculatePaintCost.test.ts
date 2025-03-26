@@ -20,4 +20,8 @@ describe('calculatePaintCost', () => {
     expect(calculatePaintCost(10, -5)).toBe(-50);
     expect(calculatePaintCost(-10, -5)).toBe(50);
   });
+
+  test('should handle very large numbers correctly', () => {
+    expect(calculatePaintCost(1000000, 1000)).toBe(1000000000); // Large number test case
+  });
 });
